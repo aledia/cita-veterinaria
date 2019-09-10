@@ -13,10 +13,10 @@ class App extends Component {
 
   // es como el document.ready de jquery
   componentDidMount(){
-    const citasLs = localStorage.getItem('citas');
+    const citasLS = localStorage.getItem('citas');
     // si tiene la forma adecuada (array) lo add al state
-    if(citasLs){
-      citas:JSON.parse(citasLs);
+    if(citasLS){
+      citas : JSON.parse(citasLS);
     }
   }
   componentDidUpdate() {
@@ -55,8 +55,8 @@ class App extends Component {
           </div>
           <div className="mt-5 col-md-10 mx-auto">
             <ListaCitas
-              citas={this.state.citas}
-              eliminarCita={this.eliminarCita}
+              citas = { this.state.citas }
+              eliminarCita = { this.eliminarCita }
             />
           </div>
         </div>
